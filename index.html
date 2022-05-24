@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="title">Weather App</div>
+    <div class="unit-selector">
+      <div class="cel selected">°C</div>
+      :
+      <div class="fah">°F</div>
+    </div>
+    <div class="main-container">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="City"/>
+        <button class="search-btn">Search</button>
+      </div>
+      <div class="weather-container">
+        <h2 class="city-name"></h2>
+        <div class="info">
+          <div class="left">
+            <div class="temp"></div>
+            <div class="real-feel"></div>
+            <div class="wind"></div>
+          </div>
+          <div class="right">
+            <div class="weather"></div>
+            <div class="icon"><img class="weather-icon" src="" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

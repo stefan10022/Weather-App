@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #009FB7;
+}
+
+html {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  padding: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background-color: #0D1321;
+}
+
+.unit-selector {
+  position: absolute;
+  top: 12%;
+  right: 1%;
+  width: 14%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+.unit-selector .cel {
+  margin-right: 10px;
+}
+.unit-selector .fah {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.unit-selector .cel, .unit-selector .fah {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.unit-selector .selected {
+  transform: scale(1.3);
+  pointer-events: none;
+}
+
+.main-container {
+  flex-basis: 40%;
+}
+@media (max-width: 768px) {
+  .main-container {
+    flex-basis: 95%;
+  }
+}
+.main-container .search-bar {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main-container .search-bar #search-input {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 5px;
+}
+.main-container .search-bar .search-btn {
+  flex-basis: 20%;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #FF495C;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.main-container .search-bar .search-btn:active {
+  background-color: #b1313e;
+}
+.main-container .weather-container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 50px;
+  max-height: 30px;
+  padding: 20px;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  background-color: white;
+}
+.main-container .weather-container .city-name {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+.main-container .weather-container .temp {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.main-container .weather-container .real-feel {
+  margin-bottom: 30px;
+}
+.main-container .weather-container .weather {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.main-container .weather-container .icon {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .weather-container .info {
+  display: flex;
+}
+.main-container .weather-container .info .left {
+  flex-basis: 50%;
+}
+.main-container .weather-container .info .right {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
