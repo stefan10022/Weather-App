@@ -19,7 +19,7 @@ const getWeatherData = async (city) => {
   let response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f07f23c9f97577ffef18d1b46556f607`
   );
-  if (response.status === 404 || response.status === 400) throw new Error;
+  if (response.status === 404 || response.status === 400) throw new Error();
   let data = await response.json();
   return data;
 };
@@ -41,7 +41,7 @@ searchBtn.addEventListener("click", () => {
         temp.innerText = `${fahTemp} °F`;
         realFeel.innerText = `Feels like: ${fahRealTemp} °F`;
       }
-      wind.innerText = `Wind speed: ${data.wind.speed} km/h`;
+      wind.innerText = `Wind speed: ${data.wind.speed * 3.6} km/h`;
 
       weatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
       weather.innerText = data.weather[0].description;
@@ -73,7 +73,6 @@ function convertToFah(temp) {
   return 1.8 * (temp - 273) + 32;
 }
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Enter")
-    searchBtn.click();
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") searchBtn.click();
 });
