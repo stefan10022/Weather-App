@@ -41,7 +41,9 @@ searchBtn.addEventListener("click", () => {
         temp.innerText = `${fahTemp} °F`;
         realFeel.innerText = `Feels like: ${fahRealTemp} °F`;
       }
-      wind.innerText = `Wind speed: ${data.wind.speed * 3.6} km/h`;
+      wind.innerText = `Wind speed: ${
+        (Math.round(data.wind.speed * 3.6) * 10) / 10
+      } km/h`;
 
       weatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
       weather.innerText = data.weather[0].description;
